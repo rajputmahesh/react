@@ -1,17 +1,16 @@
 
+/// <reference types="react" />
 import React, { useRef } from "react";
+// Ensure the automatic JSX runtime types are available
+import 'react/jsx-runtime';
 import "./App.css";
 import { registerLicense } from "@syncfusion/ej2-base";
-import {
-  DocumentEditorContainerComponent,
-  Toolbar,
-  Ribbon
-} from "@syncfusion/ej2-react-documenteditor";
+import { DocumentEditorContainerComponent, Toolbar, Ribbon } from "@syncfusion/ej2-react-documenteditor";
 
 DocumentEditorContainerComponent.Inject(Toolbar, Ribbon);
 
-registerLicense("Add Your key here");
-
+registerLicense("YOUR LICENSE KEY HERE");
+    
 function App() {
   const container = useRef<DocumentEditorContainerComponent>(null);
   const tabAdded = useRef(false);
@@ -40,8 +39,8 @@ function App() {
                 {
                   type: "Button",
                   buttonSettings: {
-                    content: "Forename",
-                    clicked: () => insertPlaceholder("<<Forename>>")
+                    content: "Read Me",
+                    clicked: () => insertPlaceholder("Dear Shreyash, I have added sample code where all the CSS formatting issues have been addressed. Please refer to this. We will hide the Developer Ribbon and provide all its features through our NextGen Add-ins Ribbon. Add your content control placeholder logic to the custom ribbon button click event."),
                   }
                 },
                 {
